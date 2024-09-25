@@ -1,0 +1,91 @@
+version: "3.9"
+
+services:
+
+    ### WordPress app ###
+    app:
+        build:
+            dockerfile: docker/app/Dockerfile
+            context: .
+        ports:
+            - "80:80"
+        volumes:
+            - .:/var/www/html
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: ${DOCKER_MYSQL_USER:-default}
+            WORDPRESS_DB_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-secret}
+            WORDPRESS_DB_NAME: ${DOCKER_MYSQL_DATABASE:-wp}
+            WORDPRESS_TABLE_PREFIX: SERVMASK_PREFIX_
+            # WORDPRESS_DEBUG: true
+
+    ### Node for frontend build
+#    node:
+#        image: node:20.12.2
+#        volumes:
+#            - ./wp-content/themes/fictional-university-theme:/opt/node_app/app
+#        working_dir: /opt/node_app/app
+#        command: tail -f /dev/null
+
+    ### Database ###
+    db:
+        image: mariadb:10.6.19
+        restart: always
+        volumes:
+            - mysql-db-data:/var/lib/mysql
+            - ./docker/db/tmp:/tmp
+        environment:
+            - MYSQL_ROOT_PASSWORD=${DOCKER_MYSQL_ROOT_PASSWORD:-root}
+            - MYSQL_USER=${DOCKER_MYSQL_USER:-default}
+            - MYSQL_PASSWORD=${DOCKER_MYSQL_PASSWORD:-secret}
+            - MYSQL_DATABASE=${DOCKER_MYSQL_DATABASE:-wp}
+            # didn't want to add any bind mount or additional Dockerfile, so put it to env variable
+            # $$ is used for escaping from docker-compose @see https://docs.docker.com/compose/environment-variables/#substitute-environment-variables-in-compose-files
+            # Init script will be run ONLY on first initialization
+            - |
+                MYSQL_INIT_SCRIPT=
+                ## main database ##
+                CREATE DATABASE IF NOT EXISTS `${DOCKER_MYSQL_DATABASE:-wp}` COLLATE 'utf8mb4_unicode_ci' ;
+                GRANT ALL ON `${DOCKER_MYSQL_DATABASE:-wp}`.* TO '${DOCKER_MYSQL_USER:-default}'@'%' ;
+
+                ## test database ##
+                CREATE DATABASE IF NOT EXISTS `${DOCKER_MYSQL_DATABASE:-wp}_test` COLLATE 'utf8mb4_unicode_ci' ;
+                GRANT ALL ON `${DOCKER_MYSQL_DATABASE:-wp}_test`.* TO '${DOCKER_MYSQL_USER:-default}'@'%' ;
+
+                FLUSH PRIVILEGES ;
+            - |
+                MYSQL_CONFIG=
+                [mysqld]
+                #
+                # You can use this file to overwrite the default configuration
+                #
+                # general_log_file='/tmp/query.log'
+                # general_log=1
+        # didn't want to add any bind mount or additional Dockerfile
+        command:
+            bash -c 'echo "$$MYSQL_INIT_SCRIPT" > /docker-entrypoint-initdb.d/init.sql
+            && chmod 555 /docker-entrypoint-initdb.d/init.sql
+            && echo "$$MYSQL_CONFIG" > /etc/mysql/conf.d/my.cnf
+            && chmod 555 /etc/mysql/conf.d/my.cnf
+            && docker-entrypoint.sh mysqld'
+
+    ### Adminer ###
+    adminer:
+        image: adminer:4.8.0-standalone
+        ports:
+            - "8080:8080"
+        environment:
+            - ADMINER_DESIGN=flat
+            - ADM_DEFAULT_SERVER=db
+            - ADMINER_PLUGINS=
+        depends_on:
+            - db
+
+    ### Mailhog ###
+    mailhog:
+        image: mailhog/mailhog
+        # About command @see https://github.com/mailhog/MailHog/issues/187#issuecomment-733009406
+        command: -invite-jim=1
+
+volumes:
+    mysql-db-data:

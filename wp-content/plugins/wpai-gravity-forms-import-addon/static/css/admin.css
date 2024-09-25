@@ -1,0 +1,116 @@
+.wpallimport-plugin .gravity_form_to_import_wrapper {
+    display: none;
+}
+.wpallimport-plugin .wp_all_import_change_taxonomy_type #gravity_form_to_import {
+    margin: 0;
+}
+.wpallimport-plugin .wp_all_import_change_taxonomy_type #gravity_form_to_import .dd-select {
+    padding: 5px 0;
+}
+.wpallimport-plugin .wp_all_import_change_taxonomy_type #gravity_form_to_import .dd-options li a {
+    padding: 5px;
+}
+.wpallimport-plugin #gravity_form_to_import {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.wpallimport-plugin #gravity_form_to_import {
+    margin-top: 30px;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-options {
+    max-height: 300px;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-options li {
+    margin-bottom: 0;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-options li .dd-option {
+    font-size: 18px;
+    color: #555;
+    border: none;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-options li .dd-option:hover,
+.wpallimport-plugin #gravity_form_to_import .dd-options li .dd-option-selected {
+    background: #eee;
+    color: #555;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-select {
+    background: #fff !important;
+    padding: 10px 0;
+    margin-left: -5px;
+}
+.wpallimport-plugin #gravity_form_to_import .dd-selected {
+    color: #000;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0;
+    padding: 0 10px;
+    line-height: 24px;
+}
+.wpallimport-plugin .change_file #gravity_form_to_import .dd-select {
+    padding: 5px 0 0;
+}
+.wpallimport-plugin .change_file #gravity_form_to_import .dd-options .dd-option {
+    padding: 0 10px;
+}
+.wpallimport-plugin .wp_all_import_change_gravity_form {
+    display: table;
+}
+.wpallimport-plugin .wp_all_import_change_gravity_form #taxonomy_to_import {
+    margin: 0;
+}
+.wpallimport-plugin .wp_all_import_change_gravity_form #taxonomy_to_import .dd-select {
+    padding: 5px 0;
+}
+.wpallimport-plugin .wp_all_import_change_gravity_form #taxonomy_to_import .dd-options li a {
+    padding: 5px;
+}
+.wpallimport-plugin .wpallimport-trigger-entry-fields{
+    cursor: pointer;
+    margin: 5px 0;
+}
+.wpallimport-plugin .pmgi_postbox {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+.wpallimport-plugin .pmgi_postbox .inside {
+    padding-left: 5px;
+}
+.wpallimport-plugin .pmgi_postbox .inside h4 {
+    color: #000000;
+    margin-bottom: 7px;
+}
+.wpallimport-plugin .pmgi_postbox .inside label {
+    font-weight: 500;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+.wpallimport-plugin .pmgi_postbox .inside input[type="text"] {
+    height: 40px;
+    width: 100%;
+}
+/*.wpallimport-plugin .pmgi_postbox .inside .columns-wrapper {*/
+/*    display: flex;*/
+/*}*/
+.wpallimport-plugin .pmgi_postbox .inside .one-column {
+    width: 100%;
+    display: inline-block;
+}
+.wpallimport-plugin .pmgi_postbox .inside .column {
+    position: relative;
+    width: 48%;
+    display: inline-block;
+}
+.wpallimport-plugin .pmgi_postbox .inside .column .ui-datepicker-trigger {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+}
+.wpallimport-plugin .pmgi_postbox .inside .column:nth-child(odd) {
+    margin-right: 1%;
+}
+.wpallimport-plugin .pmgi_postbox .inside .column:nth-child(even) {
+    margin-left: 1%;
+    float: right;
+}
