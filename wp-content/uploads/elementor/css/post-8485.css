@@ -1,0 +1,29 @@
+.elementor-8485 .elementor-element.elementor-element-29afb0d > .elementor-container{max-width:1220px;}.elementor-8485 .elementor-element.elementor-element-29afb0d:not(.elementor-motion-effects-element-type-background), .elementor-8485 .elementor-element.elementor-element-29afb0d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#F9F9F9;}.elementor-8485 .elementor-element.elementor-element-29afb0d{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-8485 .elementor-element.elementor-element-29afb0d > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}body.elementor-page-8485:not(.elementor-motion-effects-element-type-background), body.elementor-page-8485 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#F9F9F9;}/* Start custom CSS for html, class: .elementor-element-5c7efa6 */.elementor-8485 .elementor-element.elementor-element-5c7efa6 .elementor-widget-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 177%;
+}
+
+.elementor-8485 .elementor-element.elementor-element-5c7efa6 iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.elementor-8485 .elementor-element.elementor-element-5c7efa6:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #f9f9f9;
+    width: 100%;
+    height: 35px;
+}/* End custom CSS */
+/* Start custom CSS for section, class: .elementor-element-29afb0d */.elementor-location-header{
+    background: #f9f9f9;
+}/* End custom CSS */

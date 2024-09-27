@@ -1,0 +1,43 @@
+.elementor-2562 .elementor-element.elementor-element-b23d849 > .elementor-container{max-width:800px;min-height:100vh;}.elementor-2562 .elementor-element.elementor-element-b23d849{padding:80px 10px 80px 10px;}.elementor-bc-flex-widget .elementor-2562 .elementor-element.elementor-element-2e0dc42.elementor-column .elementor-widget-wrap{align-items:center;}.elementor-2562 .elementor-element.elementor-element-2e0dc42.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}.elementor-2562 .elementor-element.elementor-element-2e0dc42.elementor-column > .elementor-widget-wrap{justify-content:center;}.elementor-2562 .elementor-element.elementor-element-a0ca97f .elementor-heading-title{color:var( --e-global-color-d5dcd36 );font-family:"Montserrat", Sans-serif;font-size:40px;font-weight:300;}.elementor-2562 .elementor-element.elementor-element-22d8329 > .elementor-element-populated{padding:0px 0px 0px 0px;}.elementor-2562 .elementor-element.elementor-element-8c16145 .elementor-button-content-wrapper{flex-direction:row;}.elementor-2562 .elementor-element.elementor-element-8c16145 .elementor-button .elementor-button-content-wrapper{gap:10px;}.elementor-2562 .elementor-element.elementor-element-8c16145 .elementor-button{background-color:var( --e-global-color-53baa9f );border-radius:0px 0px 0px 0px;}.elementor-2562 .elementor-element.elementor-element-8c16145 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-2562 .elementor-element.elementor-element-2d87650 .elementor-button-content-wrapper{flex-direction:row-reverse;}.elementor-2562 .elementor-element.elementor-element-2d87650 .elementor-button .elementor-button-content-wrapper{gap:10px;}.elementor-2562 .elementor-element.elementor-element-2d87650 .elementor-button{fill:var( --e-global-color-53baa9f );color:var( --e-global-color-53baa9f );background-color:#B4010100;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 0px;}/* Start custom CSS for shortcode, class: .elementor-element-0542ab6 */.elementor-2562 .elementor-element.elementor-element-0542ab6 .um-account-side ul li a.current{
+    background: #B40101;
+}
+
+.elementor-2562 .elementor-element.elementor-element-0542ab6 [name="um_account_submit"]{
+    background: #B40101 !important;
+    width: 100%;
+    text-align: left;
+}
+
+.elementor-2562 .elementor-element.elementor-element-0542ab6 .um-account-tab .um-col-alt-b .um-left{
+    width: 100%;
+    position: relative;
+}
+
+.elementor-2562 .elementor-element.elementor-element-0542ab6 .um-account-tab .um-col-alt-b .um-left:after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #F9F9F9;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.elementor-2562 .elementor-element.elementor-element-0542ab6 [data-tab="privacy"],
+.elementor-2562 .elementor-element.elementor-element-0542ab6 [data-tab="delete"] {
+    display: none !important;
+}/* End custom CSS */
+/* Start custom CSS for button, class: .elementor-element-8c16145 */.elementor-2562 .elementor-element.elementor-element-8c16145 {
+    width: 199px;
+    margin: 0 !important;
+}/* End custom CSS */
+/* Start custom CSS for button, class: .elementor-element-2d87650 */.elementor-2562 .elementor-element.elementor-element-2d87650{
+    width: auto;
+}/* End custom CSS */
+/* Start custom CSS for column, class: .elementor-element-22d8329 */.elementor-2562 .elementor-element.elementor-element-22d8329 .elementor-widget-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+}/* End custom CSS */

@@ -1,0 +1,60 @@
+.elementor-7964 .elementor-element.elementor-element-c9c8831 > .elementor-container{max-width:530px;}.elementor-7964 .elementor-element.elementor-element-c9c8831{padding:5% 0% 5% 0%;}.elementor-7964 .elementor-element.elementor-element-0bec8a4 img{height:45px;object-fit:contain;object-position:center center;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group{margin-bottom:16px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-form-fields-wrapper{margin-bottom:-16px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group > a{color:var( --e-global-color-53baa9f );}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group > a:hover{color:var( --e-global-color-53baa9f );}body .elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group > label{padding-bottom:5px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-form-fields-wrapper label{color:var( --e-global-color-d5dcd36 );font-family:"Roboto", Sans-serif;font-size:16px;font-weight:400;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group .elementor-field:not(.elementor-select-wrapper){background-color:#F9F9F9;border-color:#DEDEDE;border-radius:6px 6px 6px 6px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group .elementor-select-wrapper select{background-color:#F9F9F9;border-color:#DEDEDE;border-radius:6px 6px 6px 6px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-field-group .elementor-select-wrapper::before{color:#DEDEDE;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-button{background-color:var( --e-global-color-17f523f );padding:14px 16px 14px 16px;}.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-widget-container .elementor-login__logged-in-message{color:var( --e-global-color-d5dcd36 );}.elementor-7964 .elementor-element.elementor-element-b549414 > .elementor-container{max-width:530px;}.elementor-7964 .elementor-element.elementor-element-b549414{margin-top:50px;margin-bottom:0px;}.elementor-7964 .elementor-element.elementor-element-e81306a > .elementor-element-populated, .elementor-7964 .elementor-element.elementor-element-e81306a > .elementor-element-populated > .elementor-background-overlay, .elementor-7964 .elementor-element.elementor-element-e81306a > .elementor-background-slideshow{border-radius:4px 4px 4px 4px;}.elementor-7964 .elementor-element.elementor-element-e81306a > .elementor-element-populated{box-shadow:0px 4px 16px 0px rgba(0, 0, 0, 0.050980392156862744);padding:22px 22px 22px 22px;}.elementor-7964 .elementor-element.elementor-element-d196191{text-align:center;}.elementor-7964 .elementor-element.elementor-element-d196191 .elementor-heading-title{color:var( --e-global-color-d5dcd36 );font-family:"Roboto", Sans-serif;font-size:32px;font-weight:300;}.elementor-7964 .elementor-element.elementor-element-5007c84 .elementor-button{font-family:"Roboto", Sans-serif;font-size:16px;font-weight:500;background-color:var( --e-global-color-17f523f );}.elementor-7964 .elementor-element.elementor-element-5007c84 > .elementor-widget-container{margin:60px 0px 0px 0px;}/* Start custom CSS for login, class: .elementor-element-8d62770 */.elementor-7964 .elementor-element.elementor-element-8d62770 [type="submit"]{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 [type="submit"]:before{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-form-fields-wrapper{
+    & > div:nth-child(1),
+    & > div:nth-child(2){
+        order: 1;
+    }
+    
+    & > div:nth-child(3){
+        order: 3;
+    }
+    
+    & > div:nth-child(4){
+        order: 4;
+    }
+    
+    & > div:nth-child(5){
+        order: 2;
+    }
+} 
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-lost-password{
+    visibility: hidden;
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-lost-password:after{
+    content: "Forgot your password?";
+    visibility: visible;
+    float: left;
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-remember-me label{
+    visibility: hidden;
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-remember-me label input{
+    visibility: visible;
+    float: left;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+.elementor-7964 .elementor-element.elementor-element-8d62770 .elementor-remember-me label:after {
+    content: "Keep me signed In";
+    visibility: visible;
+    float: left;
+}/* End custom CSS */

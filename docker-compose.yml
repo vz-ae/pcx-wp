@@ -11,6 +11,7 @@ services:
             - "80:80"
         volumes:
             - .:/var/www/html
+            - ./___local/dev:/var/www/html/___local/dev
         environment:
             WORDPRESS_DB_HOST: db
             WORDPRESS_DB_USER: ${DOCKER_MYSQL_USER:-default}
