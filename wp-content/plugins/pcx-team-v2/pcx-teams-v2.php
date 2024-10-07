@@ -1605,7 +1605,7 @@ function render_contract_writing_videos($atts) {
     ob_start();
     ?>
     <div class="contract-writing-videos">
-        <ul class="contract-writing-videos-list" style="list-style: none;padding:0;">
+        <ul class="contract-writing-videos-list" style="list-style: none;padding:0;grid-template-columns: repeat(1, minmax(200px, auto));">
             <?php 
                 foreach ($videos as $video) { 
                 $yt_video = getYoutubeID($video['video-link']);
