@@ -446,7 +446,7 @@ function persons_list(){
                                         <?php echo $coach_phone; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($coach_email){?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -456,7 +456,7 @@ function persons_list(){
                                         <?php echo "<a href='mailto:$coach_email'>$coach_email</a>"; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($coach_calender_link){ ?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -503,7 +503,7 @@ function persons_list(){
                                         <?php echo $mca_phone; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($mca_email){?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -560,7 +560,7 @@ function persons_list(){
                                         <?php echo $tl_phone; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($tl_email){?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -570,7 +570,7 @@ function persons_list(){
                                         <?php echo "<a href='mailto:$tl_email'>$tl_email</a>"; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($tl_calender_link){ ?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -618,7 +618,7 @@ function persons_list(){
                                         <?php echo $managing_broker_phone; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($managing_broker_email){?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -679,7 +679,7 @@ function persons_list(){
                                         <?php echo $services_manager_phone; ?>
                                     </div>
                                 </div>
-                            <?php } 
+                            <?php }
                             if($services_manager_email){?>
                                 <div class="single-contact-info">
                                     <div class="contanct-info-icon">
@@ -855,31 +855,38 @@ function display_quick_links($atts){
 }
 
 add_shortcode( 'quick-links-url', 'display_quick_links_url' );
-function display_quick_links_url($atts){
-    $args = shortcode_atts( array(
+function display_quick_links_url($atts) {
+    $args = shortcode_atts(array(
         'link'=> null,
     ), $atts);
-    if($args['link']===null){
+
+    if ($args['link']===null) {
         return 'Link Id Required';
-    }else{
-        $link_id = $args['link'];
-        $user_office_id = get_current_user_office();
-        $quick_links = get_field('quick_links', $user_office_id);
-        if($link_id == 'mls_url'){
-            $link = $quick_links['mls_url'];
-            $label = 'MLS';
-        }elseif($link_id == 'board_of_realtors'){
-            $link = $quick_links['board_of_realtors'];
-            $label = 'Board Of Realtors';
-        }else{
-            $link = '#';
-            $label = 'Invalid Link ID';
-        }
-        if(!$link || $link==='' ){
-            $link = '#';
-        }
-        return $link;
     }
+
+    $link_id = $args['link'];
+    $user_office_id = get_current_user_office();
+    $quick_links = get_field('quick_links', $user_office_id);
+
+    return !empty($quick_links[$link_id]) ? $quick_links[$link_id] : '#';
+}
+
+add_shortcode( 'quick-links-label', 'display_quick_links_label' );
+function display_quick_links_label($atts)
+{
+    $args = shortcode_atts( array(
+        'label'=> null,
+    ), $atts);
+
+    if ($args['label']===null) {
+        return 'Label Id Required';
+    }
+
+    $label_id = $args['label'];
+    $user_office_id = get_current_user_office();
+    $quick_links = get_field('quick_links', $user_office_id);
+
+    return !empty($quick_links[$label_id]) ? $quick_links[$label_id] : '--';
 }
 
 // Shortcode For displaying Additional Resources 
@@ -1448,7 +1455,7 @@ function get_team_member_info($atts){
     }
 
     $team_title = $args['team_title'];
-    $team_member = get_field($team_title,$user_office_id);
+    $team_member = get_field($team_title, $user_office_id);
     if(!$team_member){
         return '';
     }

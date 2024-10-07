@@ -12,12 +12,13 @@ services:
         volumes:
             - .:/var/www/html
             - ./___local/dev:/var/www/html/___local/dev
+            - ./docker/app/tmp:/tmp
         environment:
             WORDPRESS_DB_HOST: db
             WORDPRESS_DB_USER: ${DOCKER_MYSQL_USER:-default}
             WORDPRESS_DB_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-secret}
             WORDPRESS_DB_NAME: ${DOCKER_MYSQL_DATABASE:-wp}
-            WORDPRESS_TABLE_PREFIX: SERVMASK_PREFIX_
+            WORDPRESS_TABLE_PREFIX: wp_
             # WORDPRESS_DEBUG: true
 
     ### Node for frontend build
